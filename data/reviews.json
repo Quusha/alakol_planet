@@ -1,0 +1,29 @@
+[
+  {
+    "id": "r1", "name": "Аружан", "date": "2025-07", "rating": 5,
+    "text": {
+      "kk": "Қара малта шынымен жеңілдік берді. Сервис қарапайым, бірақ су мен ауа бәрін өтейді.",
+      "ru": "Чёрная галька действительно принесла облегчение. Сервис простой, но вода и воздух всё окупают.",
+      "en": "The black pebbles really brought relief. Service is basic, but the water and air make up for it."
+    },
+    "forWhom": { "kk": "Буыны ауыратындарға", "ru": "Тем, у кого болят суставы", "en": "Those with joint pain" }
+  },
+  {
+    "id": "r2", "name": "Дмитрий", "date": "2025-08", "rating": 4,
+    "text": {
+      "kk": "Табиғаты керемет, бірақ жел мен шаңға дайын болыңыз. Алдын ала біліп барғаныма ризамын.",
+      "ru": "Природа потрясающая, но будьте готовы к ветру и пыли. Рад, что знал заранее.",
+      "en": "Stunning nature, but be ready for wind and dust. Glad I knew in advance."
+    },
+    "forWhom": { "kk": "Табиғат сүйер жандарға", "ru": "Любителям дикой природы", "en": "Wild-nature lovers" }
+  },
+  {
+    "id": "r3", "name": "Gulnar", "date": "2025-06", "rating": 5,
+    "text": {
+      "kk": "Құстарды бақылау — бөлек әлем. Реликт шағаласын көрдік. Балаларға ұмытылмас әсер.",
+      "ru": "Наблюдение за птицами — отдельный мир. Видели реликтовую чайку. Детям — незабываемо.",
+      "en": "Birdwatching is a world of its own. We saw the relict gull. Unforgettable for the kids."
+    },
+    "forWhom": { "kk": "Отбасыларға, эко-туристерге", "ru": "Семьям, эко-туристам", "en": "Families, eco-tourists" }
+  }
+]

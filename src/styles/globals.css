@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background 1.2s ease;
+  overflow-x: hidden;
+}
+h1, h2, h3, .display { font-family: var(--font-display), 'Noto Serif', serif; }
+
+::selection { background: var(--alakol-turq); color: #04232a; }
+
+/* subtle scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: rgba(127, 216, 210, 0.35); border-radius: 8px; }
+
+/* focus visibility for keyboard users */
+:focus-visible { outline: 2px solid var(--alakol-turq); outline-offset: 3px; border-radius: 6px; }
+
+/* reveal-on-scroll utility */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* the era-transition glitch: chromatic aberration + one scanline, <=200ms */
+.era-glitch { animation: eraGlitch 0.2s steps(2) 1; }
+@keyframes eraGlitch {
+  0% { filter: none; }
+  50% { filter: drop-shadow(2px 0 0 #ff004c) drop-shadow(-2px 0 0 #00e5ff); transform: translateX(1px); }
+  100% { filter: none; }
+}
+
+/* caustic text reveal — headings rise "from under the water" */
+.caustic-reveal { clip-path: inset(0 0 100% 0); transition: clip-path 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+.caustic-reveal.in { clip-path: inset(0 0 0 0); }
+
+/* Respect the user's system + explicit preference: no motion sickness. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+[data-reduced='true'] .reveal { opacity: 1 !important; transform: none !important; }
+[data-reduced='true'] .caustic-reveal { clip-path: inset(0 0 0 0) !important; }
+[data-reduced='true'] .era-glitch { animation: none !important; }

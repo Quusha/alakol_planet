@@ -1,0 +1,30 @@
+:root {
+  /* base turquoise-led palette */
+  --alakol-deep: #0b3d46;
+  --alakol-teal: #12808c;
+  --alakol-turq: #2fb6be;
+  --alakol-shallow: #7fd8d2;
+  --alakol-mist: #dcefec;
+  --stone: #b9a488;
+  --stone-dark: #4a4038;
+  --sun: #e8b667;
+  --ink: #14231f;
+
+  /* time-travel grade: 0 -> geological (cold indigo/graphite), 1 -> cyber-minimal */
+  --era: 0;
+  --grade-cold: #0a1220;
+  --grade-teal: #0b3d46;
+  --grade-warm: #2a1e16;
+  --grade-cyber: #05131a;
+
+  --bg: var(--grade-teal);
+  --fg: var(--alakol-mist);
+}
+
+/* Per-section grades — set --era to drive colour temperature */
+[data-era='geo'] { --era: 0; --bg: #0a1220; }
+[data-era='hydro'] { --era: 0.2; --bg: #082d34; }
+[data-era='life'] { --era: 0.45; --bg: #0b3d46; }
+[data-era='status'] { --era: 0.55; --bg: #0e4a4f; }
+[data-era='landscape'] { --era: 0.35; --bg: #123b3a; }
+[data-era='modern'] { --era: 1; --bg: #05131a; }

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "almaty",
+    "from": { "kk": "Алматы", "ru": "Алматы", "en": "Almaty" },
+    "transport": { "kk": "Автокөлік · Үшарал арқылы", "ru": "Автомобиль · через Ушарал", "en": "Car · via Usharal" },
+    "km": 560, "hours": 8,
+    "season": { "kk": "мамыр–қыркүйек", "ru": "май–сентябрь", "en": "May–September" }
+  },
+  {
+    "id": "astana",
+    "from": { "kk": "Астана", "ru": "Астана", "en": "Astana" },
+    "transport": { "kk": "Пойыз · Астана–Достық", "ru": "Поезд · Астана–Достык", "en": "Train · Astana–Dostyk" },
+    "km": 1050, "hours": 20,
+    "season": { "kk": "жыл бойы", "ru": "круглый год", "en": "year-round" }
+  },
+  {
+    "id": "semey",
+    "from": { "kk": "Семей", "ru": "Семей", "en": "Semey" },
+    "transport": { "kk": "Автокөлік · Аягөз арқылы", "ru": "Автомобиль · через Аягоз", "en": "Car · via Ayagoz" },
+    "km": 500, "hours": 7,
+    "season": { "kk": "мамыр–қыркүйек", "ru": "май–сентябрь", "en": "May–September" }
+  },
+  {
+    "id": "oskemen",
+    "from": { "kk": "Өскемен", "ru": "Усть-Каменогорск", "en": "Oskemen" },
+    "transport": { "kk": "Автокөлік", "ru": "Автомобиль", "en": "Car" },
+    "km": 620, "hours": 9,
+    "season": { "kk": "маусым–тамыз", "ru": "июнь–август", "en": "June–August" }
+  },
+  {
+    "id": "ushtobe",
+    "from": { "kk": "Үштөбе / Достық", "ru": "Уштобе / Достык", "en": "Ushtobe / Dostyk" },
+    "transport": { "kk": "Пойыз + трансфер", "ru": "Поезд + трансфер", "en": "Train + transfer" },
+    "km": 250, "hours": 4,
+    "season": { "kk": "жыл бойы", "ru": "круглый год", "en": "year-round" }
+  }
+]
