@@ -1,0 +1,11 @@
+[
+  { "id": "relict-gull", "latin": "Larus relictus",
+    "name": { "kk": "Реликт шағаласы", "ru": "Реликтовая чайка", "en": "Relict gull" },
+    "note": { "kk": "Әлемде санаулы жерде ұя салады", "ru": "Гнездится лишь в нескольких местах мира", "en": "Nests in only a few places on Earth" } },
+  { "id": "flamingo", "latin": "Phoenicopterus roseus",
+    "name": { "kk": "Қызғылт қоқиқаз", "ru": "Розовый фламинго", "en": "Greater flamingo" },
+    "note": { "kk": "Көші-қон кезінде кездеседі", "ru": "Встречается на миграциях", "en": "Seen during migration" } },
+  { "id": "pelican", "latin": "Pelecanus crispus",
+    "name": { "kk": "Бұйра бірқазан", "ru": "Кудрявый пеликан", "en": "Dalmatian pelican" },
+    "note": { "kk": "Су-батпақты алқаптардың тұрғыны", "ru": "Обитатель водно-болотных угодий", "en": "Wetland resident" } }
+]

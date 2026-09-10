@@ -1,0 +1,8 @@
+[
+  { "id": "geology",     "icon": "⛰",  "accent": "#B9A488", "era": 0.0 },
+  { "id": "hydrology",   "icon": "🌊", "accent": "#2FB6BE", "era": 0.15 },
+  { "id": "biodiversity","icon": "🕊", "accent": "#7FD8D2", "era": 0.45 },
+  { "id": "status",      "icon": "🛡", "accent": "#12808C", "era": 0.55 },
+  { "id": "landscape",   "icon": "🧭", "accent": "#E8B667", "era": 0.35 },
+  { "id": "health",      "icon": "💧", "accent": "#0B3D46", "era": 1.0 }
+]

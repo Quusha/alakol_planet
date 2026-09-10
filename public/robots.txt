@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: replace with your Pages URL, then uncomment:
+# Sitemap: https://<username>.github.io/<repo>/sitemap.xml

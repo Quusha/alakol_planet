@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": "ALAKÓL — the Alakol planet · a documentary-digital experience",
+    "description": "Alakol is not just a resort but a unique territory of natural, ecological and recreational value. What is here, why come, how to get there, where to stay, and who it is for."
+  },
+  "nav": {
+    "pillars": "Pillars",
+    "audience": "Who it's for",
+    "routes": "Getting there",
+    "stays": "Where to stay",
+    "reviews": "Reviews",
+    "practical": "Practical",
+    "overview": "Region overview",
+    "skip": "Skip to information",
+    "menu": "Menu"
+  },
+  "orbit": {
+    "breathe": "scroll to begin the descent",
+    "enter": "Begin the journey",
+    "loading": "Entering orbit…"
+  },
+  "eras": {
+    "title": "Timeline",
+    "geo": "Geological formation",
+    "silkroad": "Ancient migrations · Silk Road",
+    "modern": "Present day",
+    "prev": "Earlier",
+    "next": "Later"
+  },
+  "pillars": {
+    "title": "Six pillars of uniqueness",
+    "intro": "Alakol reveals itself honestly through six features. None of them is a five-star resort — yet they are exactly what makes this place irreplaceable.",
+    "geology": {
+      "title": "Geology",
+      "tagline": "Layered shores and black pebbles",
+      "body": "Eroded, layered shores and healing black pebbles of volcanic-mineral origin. Here stone is part of the therapy, not just scenery."
+    },
+    "hydrology": {
+      "title": "Hydrology",
+      "tagline": "An endorheic, shifting lake",
+      "body": "A closed, mineralised lake whose water changes hue along the shore. Its mineral composition and brine are known for their wellness effect."
+    },
+    "biodiversity": {
+      "title": "Biodiversity",
+      "tagline": "Relict gull and migrations",
+      "body": "The Alakol Reserve is one of the few nesting grounds on Earth for the relict gull (Larus relictus) and a hub of mass bird migration."
+    },
+    "status": {
+      "title": "International status",
+      "tagline": "Ramsar wetlands",
+      "body": "Wetlands of international importance (Ramsar Convention) and a key ornithological territory."
+    },
+    "landscape": {
+      "title": "Landscape",
+      "tagline": "The Dzungarian Gate",
+      "body": "Nearby lies the Dzungarian Gate, corridor of the Yibe and Yevgey winds. Mountains, steppe and water fit into a single frame."
+    },
+    "health": {
+      "title": "Wellness",
+      "tagline": "Water, pebbles, climate",
+      "body": "Mineral water, black pebbles and climatotherapy. People come here for relief — joints, skin, rest for the body — not for five-star service."
+    }
+  },
+  "audience": {
+    "title": "Who this place is for — and who it isn't",
+    "intro": "We don't sell an illusion. It is remote: the sun overhead, wind and dust, heat, infrastructure that is patchy in places. The choice is yours — we give you honest information.",
+    "forTitle": "A fit if you",
+    "notForTitle": "Maybe not for you if"
+  },
+  "routes": {
+    "title": "Getting there",
+    "intro": "Departure points, transport, distance and travel time. Figures are approximate — verify before your trip.",
+    "transport": "Transport",
+    "distance": "Distance",
+    "time": "Travel time",
+    "season": "Season",
+    "note": "The main access to the shore is via Usharal; the nearest rail line is Astana–Dostyk.",
+    "kmUnit": "km",
+    "hoursUnit": "h"
+  },
+  "stays": {
+    "title": "Where to stay",
+    "intro": "Honest price ranges — this is not Turkey. From guesthouses to first-line camps.",
+    "priceFrom": "from",
+    "perNight": "per night",
+    "amenities": "Included",
+    "missing": "Don't expect"
+  },
+  "reviews": {
+    "title": "What visitors say",
+    "intro": "Unvarnished reviews — with a note on who the place suited.",
+    "forWhom": "Suited",
+    "rating": "Rating"
+  },
+  "practical": {
+    "title": "Practical block",
+    "intro": "Short and to the point: how to get there, where to stay, what it costs and who it is for."
+  },
+  "live": {
+    "label": "Now at Alakol",
+    "wind": "Wind",
+    "temp": "Temperature",
+    "offline": "live data unavailable — typical values shown",
+    "windUnit": "m/s"
+  },
+  "ui": {
+    "youAreHere": "You are here",
+    "expand": "Expand globe",
+    "collapse": "Collapse",
+    "reduceMotion": "Reduce motion",
+    "fullMotion": "Full motion",
+    "sound": "Sound",
+    "top": "Top",
+    "language": "Language"
+  },
+  "compass": { "north": "N", "label": "Compass" },
+  "glyphTest": "Әә Ғғ Ққ Ңң Өө Ұұ Үү Һһ Іі — Alakól, Jetisu, Dzungarian Gate, mineral water",
+  "notFound": {
+    "title": "Only steppe and wind here",
+    "text": "This page does not exist. Return to the region overview.",
+    "home": "Home"
+  }
+}

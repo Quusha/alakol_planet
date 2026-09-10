@@ -1,0 +1,14 @@
+{
+  "name": "ALAKÓL — Alakol planet",
+  "short_name": "ALAKÓL",
+  "description": "Документально-цифровой опыт озера Алаколь.",
+  "lang": "kk",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#04121a",
+  "theme_color": "#0B3D46",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

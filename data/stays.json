@@ -1,0 +1,38 @@
+[
+  {
+    "id": "guesthouse",
+    "type": { "kk": "Қонақ үй (жеке сектор)", "ru": "Гостевой дом (частный сектор)", "en": "Guesthouse (private)" },
+    "priceFrom": 8000,
+    "amenities": [
+      { "kk": "Жағаға жақын", "ru": "Близко к берегу", "en": "Near the shore" },
+      { "kk": "Үй асханасы", "ru": "Домашняя кухня", "en": "Home cooking" }
+    ],
+    "missing": [
+      { "kk": "Тұрақты ыстық су болмауы мүмкін", "ru": "Возможны перебои с горячей водой", "en": "Hot water may be intermittent" }
+    ]
+  },
+  {
+    "id": "base",
+    "type": { "kk": "Демалыс базасы", "ru": "База отдыха", "en": "Recreation base" },
+    "priceFrom": 15000,
+    "amenities": [
+      { "kk": "Өз жағажайы", "ru": "Свой пляж", "en": "Own beach" },
+      { "kk": "Тамақтану", "ru": "Питание", "en": "Meals" }
+    ],
+    "missing": [
+      { "kk": "Люкс сервисті күтпеңіз", "ru": "Не ждите люкс-сервиса", "en": "Don't expect luxury service" }
+    ]
+  },
+  {
+    "id": "firstline",
+    "type": { "kk": "Бірінші желі қонақүйі", "ru": "Отель первой линии", "en": "First-line hotel" },
+    "priceFrom": 28000,
+    "amenities": [
+      { "kk": "Бассейн", "ru": "Бассейн", "en": "Pool" },
+      { "kk": "Кондиционер", "ru": "Кондиционер", "en": "Air conditioning" }
+    ],
+    "missing": [
+      { "kk": "Маусымда орын тез бітеді", "ru": "В сезон места быстро заканчиваются", "en": "Sells out fast in season" }
+    ]
+  }
+]

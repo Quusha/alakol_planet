@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: replace https://example.github.io/alakol-planet with your real Pages URL -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.github.io/alakol-planet/kk/</loc><xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="kk" href="https://example.github.io/alakol-planet/kk/"/></url>
+  <url><loc>https://example.github.io/alakol-planet/ru/</loc></url>
+  <url><loc>https://example.github.io/alakol-planet/en/</loc></url>
+  <url><loc>https://example.github.io/alakol-planet/kk/practical/</loc></url>
+  <url><loc>https://example.github.io/alakol-planet/ru/practical/</loc></url>
+  <url><loc>https://example.github.io/alakol-planet/en/practical/</loc></url>
+</urlset>
