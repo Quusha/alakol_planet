@@ -1,7 +1,7 @@
 import Link from 'next/link';
+import { setRequestLocale } from 'next-intl/server';
 import { getMessages } from '@/lib/i18n/messages';
-import { isLocale, type Locale } from '@/lib/i18n/config';
-import { locales } from '@/lib/i18n/config';
+import { isLocale, type Locale, locales } from '@/lib/i18n/config';
 import LensHeader from '@/components/ui/LensHeader';
 import Audience from '@/components/sections/Audience';
 import Routes from '@/components/sections/Routes';
@@ -14,6 +14,7 @@ export function generateStaticParams() {
 
 export default function PracticalPage({ params }: { params: { locale: string } }) {
   const locale = (isLocale(params.locale) ? params.locale : 'kk') as Locale;
+  setRequestLocale(locale);
   const m = getMessages(locale).practical;
   const nav = getMessages(locale).nav;
   return (
