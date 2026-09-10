@@ -1,12 +1,10 @@
-import {getRequestConfig} from 'next-intl/server';
-import {notFound} from 'next/navigation';
+import { getRequestConfig } from 'next-intl/server';
 
-const locales = ['ru', 'kk', 'en'];
+const locales = ['kk', 'ru', 'en'];
 
-export default getRequestConfig(async ({locale}) => {
-  if (!locales.includes(locale as any)) notFound();
-
-  return {
-    messages: (await import(`./messages/${locale}.json`)).default
-  };
+export default getRequestConfig(async ({ requestLocale }) => {
+  let locale = await requestLocale;
+  if (!locale || !locales.includes(locale)) locale = 'kk';
+  const messages = (await import(`../../messages/${locale}.json`)).default;
+  return { locale, messages };
 });
