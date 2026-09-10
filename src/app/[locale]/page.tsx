@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import OrbitStage from '@/components/OrbitStage';
 import LensHeader from '@/components/ui/LensHeader';
 import ProgressPath from '@/components/ui/ProgressPath';
@@ -11,22 +12,17 @@ import Routes from '@/components/sections/Routes';
 import Stays from '@/components/sections/Stays';
 import Reviews from '@/components/sections/Reviews';
 
-export default function HomePage() {
+export default function HomePage({ params }: { params: { locale: string } }) {
+  setRequestLocale(params.locale);
   return (
     <>
-      {/* fixed cinematic background (globe / poster) */}
       <OrbitStage />
-      {/* scroll region that drives the flight camera */}
       <div id="flight-track" className="pointer-events-none absolute left-0 top-0 h-[130svh] w-px" aria-hidden />
-
-      {/* UI overlays */}
       <LensHeader />
       <ProgressPath />
       <LiveBadge />
       <EraSlider />
       <MiniCompass />
-
-      {/* content sits above the stage */}
       <main className="relative z-20">
         <Hero />
         <div className="bg-black/20 backdrop-blur-[2px]">
@@ -40,12 +36,8 @@ export default function HomePage() {
         </div>
         <footer className="relative z-20 border-t border-white/10 bg-black/40 px-5 py-10 text-center text-sm text-white/50">
           <div className="font-display text-lg text-white">ALAKÓL</div>
-          <p className="mx-auto mt-2 max-w-md">
-            46.1° N · 81.6° E — Абай / Жетісу, Қазақстан
-          </p>
-          <p className="mt-3 text-xs text-white/30">
-            © {new Date().getFullYear()} · демо-платформа. Факты и цифры требуют проверки (TODO-verify).
-          </p>
+          <p className="mx-auto mt-2 max-w-md">46.1° N · 81.6° E — Абай / Жетісу, Қазақстан</p>
+          <p className="mt-3 text-xs text-white/30">© {new Date().getFullYear()} · демо-платформа. TODO-verify.</p>
         </footer>
       </main>
     </>
