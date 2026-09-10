@@ -1,21 +1,18 @@
-/**
- * Static export config for GitHub Pages.
- * The GitHub Action sets PAGES_BASE_PATH to "/<repo-name>" so assets resolve
- * under https://<user>.github.io/<repo-name>/. Locally it stays empty.
- */
+import createNextIntlPlugin from 'next-intl/plugin';
+
 const basePath = process.env.PAGES_BASE_PATH || '';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',            // emits a fully static site into ./out
+  output: 'export',
   reactStrictMode: true,
-  trailingSlash: true,         // GitHub Pages serves /path/ -> /path/index.html
+  trailingSlash: true,
   basePath: basePath || undefined,
   assetPrefix: basePath || undefined,
-  images: { unoptimized: true }, // no server: next/image must be unoptimized
+  images: { unoptimized: true },
   env: { NEXT_PUBLIC_BASE_PATH: basePath },
-  // three.js ships ESM; transpile for good measure
   transpilePackages: ['three'],
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+export default withNextIntl(nextConfig);
