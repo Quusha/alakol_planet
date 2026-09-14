@@ -1,6 +1,5 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import Reveal from '@/components/ui/Reveal';
 import { DATA } from '@/lib/data';
 import { useLoc } from '@/lib/i18n/useLoc';
 
@@ -9,44 +8,34 @@ export default function Stays() {
   const loc = useLoc();
   const fmt = (n: number) => new Intl.NumberFormat('ru-RU').format(n) + ' ₸';
   return (
-    <section id="stays" className="relative border-y border-white/5 bg-black/20">
-      <div className="mx-auto max-w-6xl px-5 py-24">
-        <Reveal as="h2" caustic className="font-display text-3xl font-bold text-white sm:text-5xl">
-          {t('title')}
-        </Reveal>
-        <Reveal as="p" className="mt-4 max-w-2xl text-white/70">
-          {t('intro')}
-        </Reveal>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {DATA.stays.map((s) => (
-            <Reveal key={s.id}>
-              <article className="flex h-full flex-col rounded-3xl border border-white/10 bg-white/[0.04] p-6">
-                <h3 className="font-display text-lg text-white">{loc(s.type)}</h3>
-                <div className="mt-1 text-alakol-shallow">
-                  <span className="text-xs text-white/50">{t('priceFrom')} </span>
-                  <span className="font-display text-xl">{fmt(s.priceFrom)}</span>
-                  <span className="text-xs text-white/50"> / {t('perNight')}</span>
-                </div>
-                <div className="mt-4 text-[11px] font-bold uppercase tracking-wider text-alakol-turq">
-                  {t('amenities')}
-                </div>
-                <ul className="mt-1 space-y-1 text-sm text-white/75">
-                  {s.amenities.map((a, i) => (
-                    <li key={i}>+ {loc(a)}</li>
-                  ))}
-                </ul>
-                <div className="mt-4 text-[11px] font-bold uppercase tracking-wider text-sun">
-                  {t('missing')}
-                </div>
-                <ul className="mt-1 space-y-1 text-sm text-white/60">
-                  {s.missing.map((a, i) => (
-                    <li key={i}>− {loc(a)}</li>
-                  ))}
-                </ul>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+    <section id="stays" className="wrap py-28">
+      <header className="max-w-3xl">
+        <h2 className="title text-4xl sm:text-6xl">{t('title')}</h2>
+        <div className="accent-rule my-6" />
+        <p className="lead">{t('intro')}</p>
+      </header>
+
+      <div className="mt-14 grid gap-6 md:grid-cols-3">
+        {DATA.stays.map((s) => (
+          <article key={s.id} className="card flex h-full flex-col p-8">
+            <h3 className="serif text-lg" style={{ color: 'var(--fg)' }}>{loc(s.type)}</h3>
+            <div className="mt-3 flex items-baseline gap-2">
+              <span className="text-xs" style={{ color: 'var(--muted)' }}>{t('priceFrom')}</span>
+              <span className="title tnum text-2xl" style={{ color: 'var(--aqua)' }}>{fmt(s.priceFrom)}</span>
+              <span className="text-xs" style={{ color: 'var(--muted)' }}>/ {t('perNight')}</span>
+            </div>
+
+            <div className="mt-6 text-xs font-semibold" style={{ color: 'var(--teal)' }}>{t('amenities')}</div>
+            <ul className="mt-2 space-y-1.5 text-sm" style={{ color: 'var(--fg)' }}>
+              {s.amenities.map((a, i) => <li key={i}>+ {loc(a)}</li>)}
+            </ul>
+
+            <div className="mt-5 text-xs font-semibold" style={{ color: 'var(--sun)' }}>{t('missing')}</div>
+            <ul className="mt-2 space-y-1.5 text-sm" style={{ color: 'var(--muted)' }}>
+              {s.missing.map((a, i) => <li key={i}>− {loc(a)}</li>)}
+            </ul>
+          </article>
+        ))}
       </div>
     </section>
   );

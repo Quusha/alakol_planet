@@ -1,38 +1,40 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import Reveal from '@/components/ui/Reveal';
 import { DATA } from '@/lib/data';
 
 export default function Pillars() {
   const t = useTranslations('pillars');
   return (
-    <section id="pillars" className="relative mx-auto max-w-6xl px-5 py-24">
-      <Reveal as="h2" caustic className="font-display text-3xl font-bold text-white sm:text-5xl">
-        {t('title')}
-      </Reveal>
-      <Reveal as="p" className="mt-4 max-w-2xl text-white/70">
-        {t('intro')}
-      </Reveal>
-      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {DATA.pillars.map((p, i) => (
-          <Reveal key={p.id}>
-            <article
-              className="group h-full rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition hover:-translate-y-1 hover:bg-white/[0.07]"
-              style={{ boxShadow: `inset 0 0 0 1px ${p.accent}22` }}
+    <section id="pillars" className="wrap py-28">
+      <header className="max-w-3xl">
+        <h2 className="title text-4xl sm:text-6xl">{t('title')}</h2>
+        <div className="accent-rule my-6" />
+        <p className="lead">{t('intro')}</p>
+      </header>
+
+      <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {DATA.pillars.map((p) => (
+          <article key={p.id} className="card group relative overflow-hidden p-8 transition-colors">
+            <span
+              className="absolute inset-x-0 top-0 h-[3px]"
+              style={{ background: `linear-gradient(90deg, ${p.accent}, transparent 85%)` }}
+              aria-hidden
+            />
+            <div
+              className="flex h-12 w-12 items-center justify-center rounded-2xl text-xl"
+              style={{ background: `${p.accent}1f`, color: p.accent }}
+              aria-hidden
             >
-              <div
-                className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl text-2xl"
-                style={{ background: `${p.accent}22` }}
-              >
-                {p.icon}
-              </div>
-              <div className="text-[11px] font-bold uppercase tracking-wider" style={{ color: p.accent }}>
-                {String(i + 1).padStart(2, '0')} · {t(`${p.id}.tagline` as never)}
-              </div>
-              <h3 className="mt-1 font-display text-xl text-white">{t(`${p.id}.title` as never)}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">{t(`${p.id}.body` as never)}</p>
-            </article>
-          </Reveal>
+              {p.icon}
+            </div>
+            <h3 className="title mt-6 text-2xl">{t(`${p.id}.title` as never)}</h3>
+            <p className="serif mt-1 text-[15px] italic" style={{ color: 'var(--sand)' }}>
+              {t(`${p.id}.tagline` as never)}
+            </p>
+            <p className="mt-4 text-[15px] leading-relaxed" style={{ color: 'var(--muted)' }}>
+              {t(`${p.id}.body` as never)}
+            </p>
+          </article>
         ))}
       </div>
     </section>
