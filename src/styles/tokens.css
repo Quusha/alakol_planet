@@ -1,30 +1,29 @@
 :root {
-  /* base turquoise-led palette */
-  --alakol-deep: #0b3d46;
-  --alakol-teal: #12808c;
-  --alakol-turq: #2fb6be;
-  --alakol-shallow: #7fd8d2;
-  --alakol-mist: #dcefec;
-  --stone: #b9a488;
-  --stone-dark: #4a4038;
-  --sun: #e8b667;
-  --ink: #14231f;
+  /* Grounded in the lake's materials: deep mineral water, black pebble, sandstone shore */
+  --ink: #051519;        /* deepest water shadow — page base */
+  --bg: #08222a;         /* section base */
+  --bg-2: #0a2a32;       /* alternate section */
+  --panel: #0c262e;      /* card surface (black-pebble tint) */
+  --panel-2: #103139;
+  --line: rgba(200, 226, 220, 0.12);
+  --line-strong: rgba(200, 226, 220, 0.22);
 
-  /* time-travel grade: 0 -> geological (cold indigo/graphite), 1 -> cyber-minimal */
-  --era: 0;
-  --grade-cold: #0a1220;
-  --grade-teal: #0b3d46;
-  --grade-warm: #2a1e16;
-  --grade-cyber: #05131a;
+  --teal: #2fb6be;       /* shallow turquoise — primary accent */
+  --aqua: #6fe0d8;       /* bright caustic highlight */
+  --sand: #d8c4a0;       /* sandstone — warm secondary text / eyebrows */
+  --sun: #e8b667;        /* sun-in-zenith — rare accent (the Alakol zone) */
+  --coral: #ff7a45;      /* wind/warning — very rare */
 
-  --bg: var(--grade-teal);
-  --fg: var(--alakol-mist);
+  --fg: #eaf4f1;         /* primary text */
+  --muted: #93aead;      /* secondary text */
+
+  --era: 1;
 }
 
-/* Per-section grades — set --era to drive colour temperature */
-[data-era='geo'] { --era: 0; --bg: #0a1220; }
-[data-era='hydro'] { --era: 0.2; --bg: #082d34; }
-[data-era='life'] { --era: 0.45; --bg: #0b3d46; }
-[data-era='status'] { --era: 0.55; --bg: #0e4a4f; }
-[data-era='landscape'] { --era: 0.35; --bg: #123b3a; }
-[data-era='modern'] { --era: 1; --bg: #05131a; }
+/* Era slider still shifts the mood by re-tinting the page base */
+[data-era='geo'] { --bg: #0a1420; --ink: #060f18; }
+[data-era='hydro'] { --bg: #082830; --ink: #041c22; }
+[data-era='life'] { --bg: #08222a; --ink: #051519; }
+[data-era='status'] { --bg: #0a2b30; --ink: #06201f; }
+[data-era='landscape'] { --bg: #0c2a2b; --ink: #071d1d; }
+[data-era='modern'] { --bg: #071a20; --ink: #030f14; }
