@@ -20,13 +20,14 @@ export default function PracticalPage({ params }: { params: { locale: string } }
   return (
     <>
       <LensHeader />
-      <main className="relative z-20 min-h-screen bg-[var(--bg)] pt-28">
-        <div className="mx-auto max-w-6xl px-5">
-          <Link href={`/${locale}`} className="text-sm text-alakol-shallow hover:text-white">
+      <main className="relative min-h-screen pt-32" style={{ background: 'var(--ink)' }}>
+        <div className="wrap">
+          <Link href={`/${locale}`} className="link-underline text-sm" style={{ color: 'var(--aqua)' }}>
             ← {nav.overview}
           </Link>
-          <h1 className="mt-3 font-display text-4xl font-bold text-white sm:text-6xl">{m.title}</h1>
-          <p className="mt-4 max-w-2xl text-white/70">{m.intro}</p>
+          <h1 className="title mt-4 text-5xl sm:text-7xl">{m.title}</h1>
+          <div className="accent-rule my-6" />
+          <p className="lead">{m.intro}</p>
         </div>
         <Audience />
         <Routes />
