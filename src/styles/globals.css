@@ -4,54 +4,61 @@
 
 html { scroll-behavior: smooth; }
 body {
-  background: var(--bg);
+  background:
+    radial-gradient(1200px 700px at 70% -10%, rgba(47,182,190,0.10), transparent 60%),
+    linear-gradient(180deg, var(--ink), var(--bg) 40%, var(--ink));
   color: var(--fg);
   font-family: var(--font-sans), Inter, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
-  transition: background 1.2s ease;
   overflow-x: hidden;
 }
-h1, h2, h3, .display { font-family: var(--font-display), 'Noto Serif', serif; }
+::selection { background: var(--teal); color: #04232a; }
+::-webkit-scrollbar { width: 11px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: rgba(111, 224, 216, 0.28); border-radius: 8px; border: 3px solid var(--ink); }
+:focus-visible { outline: 2px solid var(--aqua); outline-offset: 3px; border-radius: 6px; }
 
-::selection { background: var(--alakol-turq); color: #04232a; }
+/* ---------- design-system component classes ---------- */
+.wrap { max-width: 1160px; margin-inline: auto; padding-inline: 24px; }
+.serif { font-family: var(--font-display), 'Noto Serif', serif; }
 
-/* subtle scrollbar */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-thumb { background: rgba(127, 216, 210, 0.35); border-radius: 8px; }
+.title { font-family: var(--font-display), serif; font-weight: 700; color: var(--fg); line-height: 1.05; letter-spacing: -0.01em; }
+.lead { color: var(--muted); font-size: 1.075rem; line-height: 1.7; max-width: 62ch; }
+.accent-rule { height: 2px; width: 64px; background: linear-gradient(90deg, var(--teal), var(--sun)); border-radius: 2px; }
 
-/* focus visibility for keyboard users */
-:focus-visible { outline: 2px solid var(--alakol-turq); outline-offset: 3px; border-radius: 6px; }
-
-/* reveal-on-scroll utility */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.in { opacity: 1; transform: none; }
-
-/* the era-transition glitch: chromatic aberration + one scanline, <=200ms */
-.era-glitch { animation: eraGlitch 0.2s steps(2) 1; }
-@keyframes eraGlitch {
-  0% { filter: none; }
-  50% { filter: drop-shadow(2px 0 0 #ff004c) drop-shadow(-2px 0 0 #00e5ff); transform: translateX(1px); }
-  100% { filter: none; }
+.card {
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border: 1px solid var(--line);
+  border-radius: 22px;
 }
+.hairline { border-color: var(--line); }
+.tnum { font-variant-numeric: tabular-nums; }
 
-/* caustic text reveal — headings rise "from under the water" */
-.caustic-reveal { clip-path: inset(0 0 100% 0); transition: clip-path 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
-.caustic-reveal.in { clip-path: inset(0 0 0 0); }
+.link-underline { background-image: linear-gradient(var(--teal), var(--teal)); background-size: 0 2px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .3s ease; }
+.link-underline:hover { background-size: 100% 2px; }
 
-/* Respect the user's system + explicit preference: no motion sickness. */
+/* photo framing */
+.frame {
+  border-radius: 24px; overflow: hidden; position: relative;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 40px 80px -40px rgba(0,0,0,0.7);
+}
+.on-photo :where(h1,h2,h3,p,span,figcaption) { text-shadow: 0 2px 22px rgba(0,0,0,.6), 0 1px 4px rgba(0,0,0,.7); }
+
+/* one orchestrated hero entrance (not per-section fades) */
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.rise { opacity: 0; animation: rise .9s cubic-bezier(.22,1,.36,1) forwards; }
+.rise-1 { animation-delay: .05s; }
+.rise-2 { animation-delay: .18s; }
+.rise-3 { animation-delay: .32s; }
+.rise-4 { animation-delay: .46s; }
+
+.era-glitch { animation: eraGlitch 0.2s steps(2) 1; }
+@keyframes eraGlitch { 0%{filter:none} 50%{filter:drop-shadow(2px 0 0 #ff004c) drop-shadow(-2px 0 0 #00e5ff)} 100%{filter:none} }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .rise { opacity: 1 !important; transform: none !important; }
 }
-[data-reduced='true'] .reveal { opacity: 1 !important; transform: none !important; }
-[data-reduced='true'] .caustic-reveal { clip-path: inset(0 0 0 0) !important; }
-[data-reduced='true'] .era-glitch { animation: none !important; }
-
-/* Readability: any text over a photo backdrop gets a soft dark shadow */
-.on-photo :where(h1,h2,h3,h4,p,li,a,strong,em,td,th,figcaption,blockquote,span){
-  text-shadow: 0 2px 22px rgba(2,12,16,.65), 0 1px 4px rgba(2,12,16,.75);
-}
-/* Hero text is over the dark globe/sky — give it a gentle lift too */
-.hero-text h1,.hero-text h2,.hero-text p,.hero-text span{
-  text-shadow: 0 2px 30px rgba(0,0,0,.55), 0 1px 4px rgba(0,0,0,.5);
-}
+[data-reduced='true'] .rise { opacity: 1 !important; transform: none !important; animation: none !important; }
