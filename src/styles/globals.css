@@ -46,3 +46,12 @@ h1, h2, h3, .display { font-family: var(--font-display), 'Noto Serif', serif; }
 [data-reduced='true'] .reveal { opacity: 1 !important; transform: none !important; }
 [data-reduced='true'] .caustic-reveal { clip-path: inset(0 0 0 0) !important; }
 [data-reduced='true'] .era-glitch { animation: none !important; }
+
+/* Readability: any text over a photo backdrop gets a soft dark shadow */
+.on-photo :where(h1,h2,h3,h4,p,li,a,strong,em,td,th,figcaption,blockquote,span){
+  text-shadow: 0 2px 22px rgba(2,12,16,.65), 0 1px 4px rgba(2,12,16,.75);
+}
+/* Hero text is over the dark globe/sky — give it a gentle lift too */
+.hero-text h1,.hero-text h2,.hero-text p,.hero-text span{
+  text-shadow: 0 2px 30px rgba(0,0,0,.55), 0 1px 4px rgba(0,0,0,.5);
+}
